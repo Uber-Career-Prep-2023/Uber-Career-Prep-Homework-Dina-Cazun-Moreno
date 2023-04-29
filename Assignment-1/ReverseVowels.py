@@ -20,3 +20,6 @@ def reverseVowels(s):
 
 
 print(reverseVowels("flamingo"))
+
+#Output
+#flamingo
