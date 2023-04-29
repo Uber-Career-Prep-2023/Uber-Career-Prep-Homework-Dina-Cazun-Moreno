@@ -17,3 +17,6 @@ def maxMeanSubArray(arr, k):
     return maxSum/k
     
 print(maxMeanSubArray([4, 5, -3, 2, 6, 1], 2))
+
+#Output
+#4.5
