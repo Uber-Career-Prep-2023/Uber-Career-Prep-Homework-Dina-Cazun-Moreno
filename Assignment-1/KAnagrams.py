@@ -32,3 +32,8 @@ def kAnagrams(s1, s2, k):
         return True
         
 print(kAnagrams("apple", "peach", 1))
+
+#Output
+#{'a': 1, 'p': 1, 'l': 1, 'e': 1}
+#{'a': 0, 'p': 0, 'l': 1, 'e': 0}
+#True
