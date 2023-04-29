@@ -13,3 +13,11 @@ def twoSum(arr, k):
             print("Pairs: " "(", arr[i], ",", difference,")")
     
 print(twoSum([1, 10, 8, 3, 2, 5, 7, 2, -2, -1], 10))
+
+#Output
+#Traceback (most recent call last):
+  #File "/Users/dinacazun/UCP_HW1.py", line 15, in <module>
+    #print(twoSum([1, 10, 8, 3, 2, 5, 7, 2, -2, -1], 10))
+  #File "/Users/dinacazun/UCP_HW1.py", line 12, in twoSum
+    #if difference in hashmap:
+#NameError: name 'difference' is not defined
