@@ -14,3 +14,6 @@ def shortestSubstring(s1, s2):
     
     for i in range(len(s1)):
         #if we have not seen character in substring then keep going
+
+#Output
+#______
