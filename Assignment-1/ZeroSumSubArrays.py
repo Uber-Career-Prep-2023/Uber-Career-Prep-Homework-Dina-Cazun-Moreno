@@ -21,3 +21,11 @@ def zeroSumSubArray(arr):
     return count
     
 print(zeroSumSubArray([4, 5, 2, -1, -3, -3, 4, 6, -7]))
+
+#Output
+#Traceback (most recent call last):
+  #File "/Users/dinacazun/UCP_HW1.py", line 23, in <module>
+    #print(zeroSumSubArray([4, 5, 2, -1, -3, -3, 4, 6, -7]))
+  #File "/Users/dinacazun/UCP_HW1.py", line 19, in zeroSumSubArray
+    #dict[i].append(totalSum)
+#KeyError: 0
