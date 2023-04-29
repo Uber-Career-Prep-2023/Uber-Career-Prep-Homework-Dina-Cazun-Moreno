@@ -24,3 +24,9 @@ print(backspaceStringCompare("Uber Career Prep", "u#Uber Careee#r Prep"))
 print(backspaceStringCompare("poop", "poop"))
 print(backspaceStringCompare("abcdef###xyz", "abcw#xyz"))
 print(backspaceStringCompare("abcdef###xyz", "abcdefxyz###"))
+
+#Output
+#True
+#True
+#True
+#True
