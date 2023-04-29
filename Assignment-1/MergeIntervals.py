@@ -23,3 +23,8 @@ def mergeIntervals(arr):
     return intervals
         
 print(mergeIntervals([(2, 3), (4, 8), (1, 2), (5, 7), (9, 12)]))
+
+#Output
+#File "/Users/dinacazun/UCP_HW1.py", line 22
+    #return intervals
+#IndentationError: expected an indented block
