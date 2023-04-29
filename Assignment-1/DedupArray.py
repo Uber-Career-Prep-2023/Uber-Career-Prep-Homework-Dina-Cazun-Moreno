@@ -16,3 +16,6 @@ def dedupArray(arr):
     return newArray
     
 print(dedupArray([1, 3, 4, 8, 10, 12]))
+
+#Output
+#[1, 3, 4, 8, 10, 12]
