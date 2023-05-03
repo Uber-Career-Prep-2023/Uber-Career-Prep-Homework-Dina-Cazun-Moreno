@@ -1,0 +1,29 @@
+  Question 4: CopyTree
+Given a binary tree, create a deep copy. Return the root of the new tree.
+
+  Question 5: IsBST
+Given a binary tree, determine if it is a binary search tree.
+
+
+  Question 6: DedupSortedList
+Given a sorted singly linked list, remove any duplicates so that no value appears more than once.
+
+
+  Question 7: MoveNthLastToFront
+Given a singly linked list, move the nth from the last element to the front of the list.
+
+
+  Question 8: IsPalindrome
+Given a doubly linked list, determine if it is a palindrome.
+
+
+  Question 9: DisconnectCycle
+Given a singly linked list, disconnect the cycle, if one exists.
+
+
+  Question 10: LeftView
+Given a binary tree, create an array of the left view (leftmost elements in each level) of the tree.
+
+
+  Question 11: FloorInBST
+Given a target numeric value and a binary search tree, return the floor (greatest element less than or equal to the target) in the BST.
