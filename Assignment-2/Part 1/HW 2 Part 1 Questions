@@ -1,0 +1,39 @@
+  Question 1: Singly Linked List
+Implement the following methods. Rather than having a separate linked list class, we will pass a Node struct that represents the head of the list (this is common practice in interview questions). The linked list article includes a Node struct definition in a number of common languages (C++, Python, Java, JavaScript); feel free to use it in your implementation. For simplicity, you can make your nodes store integers rather than generic data types. In each of the methods, you should use pointers in languages that support pointers (e.g., Node * in C++) or a reference in languages that support references (e.g., Python).
+
+Node insertAtFront(Node head, int val) // creates new Node with data val at front; returns new head
+void insertAtBack(Node head int val) // creates new Node with data val at end
+void insertAfter(Node head, int val, Node loc) // creates new Node with data val after Node loc
+Node deleteFront(Node head) // removes first Node; returns new head
+void deleteBack(Node head) // removes last Node
+Node deleteNode(Node head, Node loc) // deletes Node loc; returns head
+int length(Node head) // returns length of the list
+Node reverseIterative(Node head) // reverses the linked list iteratively
+Node reverseRecursive(Node head) // reverses the linked list recursively (Hint: you will need a helper function)
+
+
+  Question 2: Doubly Linked List
+Copy-paste your implementation from Question 1 and modify it. Your Node struct should have an additional prev reference as well as a next.
+
+Node insertAtFront(Node head, int val) // creates new Node with data val at front; returns new head
+void insertAtBack(Node head int val) // creates new Node with data val at end
+void insertAfter(Node head, int val, Node loc) // creates new Node with data val after Node loc
+Node deleteFront(Node head) // removes first Node; returns new head
+void deleteBack(Node head) // removes last Node
+Node deleteNode(Node head, Node loc) // deletes Node loc; returns head
+int length(Node head) // returns length of the list
+Node reverseIterative(Node head) // reverses the linked list iteratively
+Node reverseRecursive(Node head) // reverses the linked list recursively (Hint: you will need a helper function)
+
+
+Question 3: Binary Search Tree
+In each of the methods, use pointers in languages that support pointers (e.g., Node * in C++) or  references in languages that support references (e.g., Python). Your Node struct will be the same as for your doubly linked list except the two pointers/references should be left and right rather than next and prev. Note that the delete method is more difficult than the insert method; you won’t need it for the rest of the assignment so either stop or get help from your mentor if you are stuck after 40 minutes.
+
+class BinarySearchTree {
+    int min() // returns the minimum value in the BST
+    int max() // returns the maximum value in the BST
+    bool contains(int val) // returns a boolean indicating whether val is present in the BST
+    // For simplicity, do not allow duplicates. If val is already present, insert is a no-op
+    void insert(int val) // creates a new Node with data val in the appropriate location
+    int delete(int val) // deletes the Node with data val, if it exists
+}
