@@ -1,29 +1,20 @@
-import queue
+def numberOfIslands(grid):
+    if not grid:
+        return 0
+    
+    def dfs(i, j):
+        if i < 0 or i >= len(grid) or j < 0 or j >= len(grid[0]) or grid[i][j] == '0':
+            return
+        grid[i][j] = '0'
+        dfs(i+1, j)
+        dfs(i-1, j)
+        dfs(i, j+1)
+        dfs(i, j-1)
 
-def vacationDestinations(destinations, origin, k):
-    graph = {}
-    for(u, v, w) in destinations:
-        if u not in graph:
-            graph[u] = {}
-        if v not in graph:
-            graph[v] = {}
-        graph[u][v] = w
-        graph[v][u] = w
-    q = queue.Queue()
-    q.put((origin, 0))
-    visited = set()
-    while not q.empty():
-        (u, t) = q.get()
-        if t > k:
-            break
-        visited.add(u)
-        for v in graph[u]:
-            if v not in visited:
-                q.put((v, t + graph[u][v] + 1))
-    return sorted(list(visited - set([origin])))
-
-destinations = [("Boston", "New York", 4), ("New York", "Philadelphia.", 2), ("Boston", "Newport", 1.5), ("Washington, D.C.", "Harper's Ferry", 1), ("Boston", "Portland", 2.5), ("Philadelphia", "Washington, D.C.", 2.5)]
-origin = "New York"
-k = 5
-
-print(vacationDestinations(destinations, origin, k))
+    count = 0
+    for i in range(len(grid)):
+        for j in range(len(grid[0])):
+            if grid[i][j]:
+                count += 1
+                dfs(i, j)
+    return count
