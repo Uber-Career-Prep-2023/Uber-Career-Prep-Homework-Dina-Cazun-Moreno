@@ -27,3 +27,11 @@ origin = "New York"
 k = 5
 
 print(vacationDestinations(destinations, origin, k))
+#output: ['Boston', 'Philadelphia.']
+
+print(vacationDestinations(destinations, origin, k)) #when k = 7
+#output: ['Boston', 'Philadelphia.']
+
+print(vacationDestinations(destinations, origin, k)) #when k = 8
+#output: ['Boston', 'Newport', 'Philadelphia.']
+
