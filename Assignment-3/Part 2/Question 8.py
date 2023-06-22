@@ -1,3 +1,5 @@
+from collections import deque
+
 def alternatingPath(graph, origin, destination):
     queue = deque([origin, 0, None])
     visited = set()
@@ -18,3 +20,6 @@ graph = {
     'D': [('C', 'blue'), ('E', 'red')],
     'E': [('C', 'red')]
 }
+
+print(alternatingPath(graph, 'A', 'E'))
+#output: ValueError: not enough values to unpack (expected 3, got 1)
