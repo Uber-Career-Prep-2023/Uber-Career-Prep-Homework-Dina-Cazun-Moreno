@@ -18,3 +18,14 @@ def numberOfIslands(grid):
                 count += 1
                 dfs(i, j)
     return count
+    
+grid = [
+    [1, 0, 1, 1, 1],
+    [1, 1, 0, 1, 1],
+    [0, 1, 0, 0, 0],
+    [0, 0, 0, 1, 0],
+    [0, 0, 0, 0, 0]
+    ]
+
+print(numberOfIslands(grid))
+#output: 25
