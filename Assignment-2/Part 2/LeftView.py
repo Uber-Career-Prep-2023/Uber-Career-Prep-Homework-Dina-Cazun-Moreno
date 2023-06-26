@@ -1,30 +1,35 @@
 #Level Order (Breadth-First) Traversal
 
-class BinarySearchTree:
-    def _init_(self, data):
+class Node:
+    def __init__(self, data):
         self.data = data
         self.left = None
         self.right = None
+ 
+def leftViewUtil(root, level, max_level):
+    if root is None:
+        return
 
-    def leftView(root):
-        if not root:
-            return
-    
-        arr = []
-        arr.append(root)
-
-        while(len(arr)):
-            num = len(arr)
-
-            for i in range(1, num + 1):
-                temp = arr[0]
-                arr.pop(0)
-
-                if i == 1:
-                    print(temp.data, end = "")
-
-                if temp.left != None:
-                    arr.append(temp.left)
-
-                if temp.right != None:
-                    arr.append(temp.right)
+    if (max_level[0] < level):
+        print (root.data, end = " ")
+        max_level[0] = level
+ 
+    leftViewUtil(root.left, level + 1, max_level)
+    leftViewUtil(root.right, level + 1, max_level)
+ 
+def leftView(root):
+    max_level = [0]
+    leftViewUtil(root, 1, max_level)
+ 
+if __name__ == '__main__':
+    root = Node(10)
+    root.left = Node(2)
+    root.right = Node(3)
+    root.left.left = Node(7)
+    root.left.right = Node(8)
+    root.right.right = Node(15)
+    root.right.left = Node(12)
+    root.right.right.left = Node(14)
+     
+    print(leftView(root))
+#Output: 10 2 7 14
