@@ -1,19 +1,17 @@
 #Growing/Shrinking Sliding Window
-
-def shortestSubstring(s1, s2):
-    #need to keep track of running substrings to then find min of them
+def shortestSubstring(s, required):
+    required_chars = set(required)
+    left = 0
+    right = len(s) - 1
+    shortest_length = float('inf')
+    while left <= right:
+        if set(s[left:right+1]) == required_chars:
+            shortest_length = min(shortest_length, right - left + 1)
+            left += 1
+        else:
+            right += 1
+    return shortest_length
     
-    #hash the elements to have a counter of them
-    #have two pointers i and j
-    
-    a, b = len(s), len(t)
-    if a < b: 
-        return " "
-        
-    hmap = collection.Counter(s2)
-    
-    for i in range(len(s1)):
-        #if we have not seen character in substring then keep going
-
-#Output
-#______
+print(shortestSubstring("abracadabra", "abc")) #Ouput: 4
+print(shortestSubstring("zxycbaabcdwxyzzxwdcbxyzabccbazyx", "zzyzx")) #Ouput: 10
+print(shortestSubstring("dog", "god")) #Ouput: 3
