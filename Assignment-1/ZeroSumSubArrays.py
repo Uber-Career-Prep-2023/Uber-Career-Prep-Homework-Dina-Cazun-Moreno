@@ -1,31 +1,17 @@
 #Hash the Running Computation
-def zeroSumSubArray(arr):
-    
-    #create hash map so dictionary
-    #then store if sum is in it
-    #have a count to see how many subarrays we got
-    
-    dict = {}
-    
-    totalSum = 0
+def zeroSumSubArrays(arr):
     count = 0
+    prefix_sum = 0
+    sum_count = {0: 1}
     
-    for i in range(len(arr)):
-        totalSum += arr[i]
-        
-        if totalSum in dict:
-            count += 1
-            
-        dict[i].append(totalSum)
-            
+    for num in arr:
+        prefix_sum += num
+        if prefix_sum in sum_count:
+            count += sum_count[prefix_sum]
+        sum_count[prefix_sum] = sum_count.get(prefix_sum, 0) + 1
+    
     return count
     
-print(zeroSumSubArray([4, 5, 2, -1, -3, -3, 4, 6, -7]))
-
-#Output
-#Traceback (most recent call last):
-  #File "/Users/dinacazun/UCP_HW1.py", line 23, in <module>
-    #print(zeroSumSubArray([4, 5, 2, -1, -3, -3, 4, 6, -7]))
-  #File "/Users/dinacazun/UCP_HW1.py", line 19, in zeroSumSubArray
-    #dict[i].append(totalSum)
-#KeyError: 0
+print(zeroSumSubArrays([4, 5, 2, -1, -3, -3, 4, 6, -7])) #Output: 2
+print(zeroSumSubArrays([1, 8, 7, 3, 11, 9])) #Output: 0
+print(zeroSumSubArrays([8, -5, 0, -2, 3, -4])) #Output: 2
