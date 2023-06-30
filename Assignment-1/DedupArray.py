@@ -15,7 +15,6 @@ def dedupArray(arr):
     
     return newArray
     
-print(dedupArray([1, 3, 4, 8, 10, 12]))
-
-#Output
-#[1, 3, 4, 8, 10, 12]
+print(dedupArray([1, 3, 4, 8, 10, 12])) #Output: [1, 3, 4, 8, 10, 12]
+print(dedupArray([0, 0, 1, 4, 5, 5, 5, 8, 9, 9, 10, 11, 15, 15])) #Output: [0, 1, 4, 5, 8, 9, 10, 11, 15]
+print(dedupArray([1, 2, 2, 3, 3, 3, 4, 4, 4, 4])) #Output: [1, 2, 3, 4]
