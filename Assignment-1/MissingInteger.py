@@ -1,25 +1,16 @@
 #Hash the elements
 
-def missingInteger(arr, n):
-    
-    #create hashmap of all nums 1 - n. set frequency or count of each element to 0.
-    #key will num. value will frequency
-    #go through array and have counter or frequency increment if num in array is in hashmap
-    #if any key's value in hashmap is 0 then return that key
-    hashmap = {}
-    
-    for i in range(1, n+1):
-        hashmap[i] = 0
-        
-    for i in range(len(arr)):
-        if arr[i] in hashmap:
-            hashmap[arr[i]] += 1
-    
-    for key in hashmap:
-        if hashmap[key] == 0:
-            return key
-        
-print(missingInteger([1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12], 12))
+def missingInteger(n, arr):
+    total_sum = (n * (n + 1)) // 2
+    arr_sum = sum(arr)
+    return total_sum - arr_sum
 
-#Output
-#9
+n = int(input("Enter the value of n: "))
+arr = list(map(int, input("Enter the sorted array: ").split()))
+
+missing_integer = missingInteger(n, arr)
+print("Missing integer:", missing_integer)
+
+missingInteger(7, [1, 2, 3, 4, 6, 7]) #Output: 5
+missingInteger(2, [1]) #Output: 2
+missingInteger(7, [1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12]) #Output: 9
